@@ -27,6 +27,24 @@ import { RouterLink, RouterView } from 'vue-router'
               Counter
             </RouterLink>
           </li>
+          <li>
+            <RouterLink
+              to="/todolist"
+              class="block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
+              active-class="bg-blue-100 text-blue-700"
+            >
+              Todo List
+            </RouterLink>
+          </li>
+          <li>
+            <RouterLink
+              to="/color-picker"
+              class="block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
+              active-class="bg-blue-100 text-blue-700"
+            >
+              Color Picker
+            </RouterLink>
+          </li>
         </ul>
       </aside>
 

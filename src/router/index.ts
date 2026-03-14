@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+import ColorPickerView from '@/views/ColorPickerView.vue'
 import CounterView from '@/views/CounterView.vue'
 import HomeView from '@/views/HomeView.vue'
+import TodolistView from '@/views/TodolistView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,6 +17,16 @@ const router = createRouter({
       path: '/counter',
       name: 'counter',
       component: CounterView,
+    },
+    {
+      path: '/todolist',
+      name: 'todolist',
+      component: TodolistView,
+    },
+    {
+      path: '/color-picker',
+      name: 'color-picker',
+      component: ColorPickerView,
     },
   ],
 })
