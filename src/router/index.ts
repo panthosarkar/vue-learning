@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import ColorPickerView from '@/views/ColorPickerView.vue'
 import CounterView from '@/views/CounterView.vue'
+import ExpenseTrackerView from '@/views/ExpenseTrackerView.vue'
 import HomeView from '@/views/HomeView.vue'
 import TodolistView from '@/views/TodolistView.vue'
 
@@ -27,6 +28,11 @@ const router = createRouter({
       path: '/color-picker',
       name: 'color-picker',
       component: ColorPickerView,
+    },
+    {
+      path: '/expense-tracker',
+      name: 'expense-tracker',
+      component: ExpenseTrackerView,
     },
   ],
 })

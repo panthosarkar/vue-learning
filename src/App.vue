@@ -45,6 +45,15 @@ import { RouterLink, RouterView } from 'vue-router'
               Color Picker
             </RouterLink>
           </li>
+          <li>
+            <RouterLink
+              to="/expense-tracker"
+              class="block rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
+              active-class="bg-blue-100 text-blue-700"
+            >
+              Expense Tracker
+            </RouterLink>
+          </li>
         </ul>
       </aside>
 

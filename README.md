@@ -26,17 +26,25 @@ See [Vite Configuration Reference](https://vite.dev/config/).
 ## Project Setup
 
 ```sh
-npm install
+yarn install
 ```
 
 ### Compile and Hot-Reload for Development
 
 ```sh
-npm run dev
+yarn dev
 ```
 
 ### Type-Check, Compile and Minify for Production
 
 ```sh
-npm run build
+yarn build
 ```
+
+## Learning Modules
+
+- `/counter`: basic counter module
+- `/todolist`: add/edit/delete tasks with reminder
+- `/color-picker`: color selection playground
+- `/expense-tracker`: add income/expenses and see computed balance
+
