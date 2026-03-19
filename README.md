@@ -48,3 +48,9 @@ yarn build
 - `/color-picker`: color selection playground
 - `/expense-tracker`: add income/expenses and see computed balance
 
+## UI Stack
+
+- Tailwind CSS for layout and utility styling
+- PrimeVue (with Aura preset theme) for UI components
+- PrimeIcons for iconography
+
