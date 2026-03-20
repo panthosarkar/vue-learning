@@ -1,5 +1,16 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import { useAuthStore } from '@/stores/authStore'
+import Button from 'primevue/button'
+import { useRouter } from 'vue-router'
+
+const authStore = useAuthStore()
+const router = useRouter()
+
+const handleLogout = () => {
+  authStore.logout()
+  router.push('/login')
+}
 </script>
 
 <template>
@@ -55,6 +66,39 @@ import { RouterLink, RouterView } from 'vue-router'
             </RouterLink>
           </li>
         </ul>
+
+        <!-- Authentication Section -->
+        <div class="mt-6 border-t border-slate-200 pt-4">
+          <h3 class="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500">
+            Account
+          </h3>
+          <div v-if="!authStore.isAuthenticated" class="space-y-2">
+            <RouterLink to="/login" class="block">
+              <Button
+                label="Login"
+                class="w-full"
+                severity="info"
+                outlined
+                @click="() => {}"
+              />
+            </RouterLink>
+            <RouterLink to="/signup" class="block">
+              <Button label="Sign Up" class="w-full" severity="success" @click="() => {}" />
+            </RouterLink>
+          </div>
+          <div v-else class="space-y-2">
+            <p class="mb-2 text-sm text-gray-700">
+              <span class="font-semibold">{{ authStore.user?.fullName }}</span>
+            </p>
+            <Button
+              label="Logout"
+              class="w-full"
+              severity="danger"
+              outlined
+              @click="handleLogout"
+            />
+          </div>
+        </div>
       </aside>
 
       <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm md:p-6">
